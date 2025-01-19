@@ -3,7 +3,6 @@ package ru.danilasar.ssualt;
 import io.micrometer.common.lang.Nullable;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
-import org.thymeleaf.spring6.SpringTemplateEngine;
 import org.springframework.core.MethodParameter;
 import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.method.support.HandlerMethodReturnValueHandler;
