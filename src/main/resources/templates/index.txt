@@ -1,1 +1,2 @@
 Hello, world from plain text!
+Hot reload is working!

@@ -1,0 +1,45 @@
+body {
+  background: #f5fff0;
+}
+
+header {
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+#wrapper {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0px 0px 20px 20px;
+}
+header .sgu img {
+  padding: 15px;
+}
+header .logo {
+  max-width: 128px;
+}
+header .logo img {
+  width: 100%;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+}
+
+/*# sourceMappingURL=base.css.map */

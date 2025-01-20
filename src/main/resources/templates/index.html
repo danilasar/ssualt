@@ -2,11 +2,42 @@
 <html xmlns:th="http://wwww.thymeleaf.org">
 
 <head>
-	<title>Getting started</title>
+	<title>${page.title}</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width" />
+	<link rel="stylesheet" th:href="@{/style/base.css}" />
 </head>
 
 <body>
+	<div id="wrapper">
+		<header>
+			<div class="sgu logo">
+				<img src="svg/sgu.svg" />
+			</div>
+			<div class="linux logo">
+				<img src="svg/ALT_logo_col.svg" />
+			</div>
+		</header>
+		<main>
+			<form>
+				<input type="text" />
+				<noscript>
+					<button>Поиск</button>
+				</noscript>
+			</form>
+			<section>
+				<article>
+					<a href="#">
+						<h1>У меня такая-то проблема</h1>
+						<div class="goto"></div>
+					</a>
+				</article>
+			</section>
+		</main>
+		<footer>
+
+		</footer>
+	</div>
 	<p th:text="|Hello, ahaha ${name}!|" />
 </body>
 

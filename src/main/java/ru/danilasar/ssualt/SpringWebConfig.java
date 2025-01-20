@@ -17,7 +17,7 @@ import org.thymeleaf.spring6.SpringTemplateEngine;
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 
 @Configuration
-@EnableWebMvc
+// @EnableWebMvc
 @ComponentScan
 public class SpringWebConfig implements WebMvcConfigurer, ApplicationContextAware {
 	private ApplicationContext applicationContext;

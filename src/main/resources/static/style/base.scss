@@ -1,0 +1,38 @@
+@import "colors.scss";
+
+#wrapper {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0px 0px 20px 20px;
+
+  .sgu img {
+    padding: 15px;
+  }
+
+  .logo {
+    max-width: 128px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+}
