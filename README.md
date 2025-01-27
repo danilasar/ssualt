@@ -12,13 +12,13 @@ Run with hot reload:
 
 ## How to use
 
-Mansite has SPA, static and text interface. You can load localhost:8080 in
-your browser and use a reactive search form. If your browser doesn't support
+The man site has reactive, static and text interface. You can open localhost:8080 in
+your browser and use the reactive search form. If your browser doesn't support
 javascript, you'll see a submit button.
 
-Also if you not need (or can't visualise) a html ui, you can work in a text
-mode: if your browser doesn't send text/html in Accept header, the server will
-return text interface. Endpoints:
+Also, if you don't need (or can't visualise) an html ui, you can work in text
+mode: if your browser doesn't send text/html in Accept header, the server
+returns the text interface. Endpoints:
 
 ```sh
 curl localhost:8080 # index page
