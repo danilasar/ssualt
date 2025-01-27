@@ -1,23 +1,27 @@
 package ru.danilasar.ssualt;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.springframework.beans.BeansException;
+import org.springframework.boot.autoconfigure.web.WebProperties.Resources.Cache;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.CacheControl;
 import org.springframework.http.MediaType;
 import org.springframework.web.method.support.HandlerMethodReturnValueHandler;
 import org.springframework.web.servlet.config.annotation.ContentNegotiationConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.thymeleaf.spring6.SpringTemplateEngine;
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 
 @Configuration
-// @EnableWebMvc
+@EnableWebMvc
 @ComponentScan
 public class SpringWebConfig implements WebMvcConfigurer, ApplicationContextAware {
 	private ApplicationContext applicationContext;
@@ -40,6 +44,13 @@ public class SpringWebConfig implements WebMvcConfigurer, ApplicationContextAwar
 	@Bean
 	public SpringTemplateEngine templateEngine() {
 		return springTemplateEngine;
+	}
+
+	@Override
+	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+		registry.addResourceHandler("/static/**") // url
+			.addResourceLocations("/static", "classpath:/static/") // file path
+			.setCacheControl(CacheControl.maxAge(Duration.ofDays(0))); // todo replace 0 to 365
 	}
 
 	private ClassLoaderTemplateResolver textTemplateResolver() {
