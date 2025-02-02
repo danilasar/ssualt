@@ -1,11 +1,246 @@
 body {
   background: #f5fff0;
+  background: repeating-linear-gradient(0, transparent 0 1px, #f5fff0 1px 4px), linear-gradient(90deg, #c8c39b, #f5fff0 90%);
 }
 
-header {
-  background: rgba(255, 255, 255, 0.7);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+header, main {
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 0 5px rgba(51, 58, 51, 0.6666666667);
+}
+
+button, input[type=button], input[type=submit], input[type=reset], .button {
+  background: #f1ecce;
+  background: linear-gradient(#fff, #000);
+}
+button:active, button:disabled, input[type=button]:active, input[type=button]:disabled, input[type=submit]:active, input[type=submit]:disabled, input[type=reset]:active, input[type=reset]:disabled, .button:active, .button:disabled {
+  -webkit-box-shadow: 0 1px 1px #fff;
+  -moz-box-shadow: 0 1px 1px #fff;
+  box-shadow: 1px 1px 0 #fff, inset 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+button:before, input[type=button]:before, input[type=submit]:before, input[type=reset]:before, .button:before {
+  -webkit-box-shadow: 0 1px 1px 0px #bfbfbf;
+  -moz-box-shadow: 0 1px 1px 0px #bfbfbf;
+  box-shadow: 0 1px 1px 0px #bfbfbf;
+}
+button .gray, button .gray:hover, button .gray:visited, input[type=button] .gray, input[type=button] .gray:hover, input[type=button] .gray:visited, input[type=submit] .gray, input[type=submit] .gray:hover, input[type=submit] .gray:visited, input[type=reset] .gray, input[type=reset] .gray:hover, input[type=reset] .gray:visited, .button .gray, .button .gray:hover, .button .gray:visited {
+  color: #555;
+  border-bottom: 4px solid #b2b1b1;
+  text-shadow: 0px 1px 0px #fafafa;
+  background: #eee;
+  background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#e2e2e2));
+  background: -moz-linear-gradient(top, #eee, #e2e2e2);
+  box-shadow: inset 1px 1px 0 #f5f5f5;
+}
+button .gray, input[type=button] .gray, input[type=submit] .gray, input[type=reset] .gray, .button .gray {
+  border: 1px solid #cbcbcb;
+  border-bottom: 4px solid #a5a5a5;
+}
+button .gray:not([disabled]):hover, input[type=button] .gray:not([disabled]):hover, input[type=submit] .gray:not([disabled]):hover, input[type=reset] .gray:not([disabled]):hover, .button .gray:not([disabled]):hover {
+  background: #e2e2e2;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e2e2e2), to(#eee));
+  background: -moz-linear-gradient(top, #e2e2e2, #eee);
+}
+button .pink, button .pink:hover, button .pink:visited, input[type=button] .pink, input[type=button] .pink:hover, input[type=button] .pink:visited, input[type=submit] .pink, input[type=submit] .pink:hover, input[type=submit] .pink:visited, input[type=reset] .pink, input[type=reset] .pink:hover, input[type=reset] .pink:visited, .button .pink, .button .pink:hover, .button .pink:visited {
+  color: #913944;
+  border-bottom: 4px solid #cb5462;
+  text-shadow: 0px 1px 0px #f9a0ad;
+  background: #f56778;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f997b0), to(#f56778));
+  background: -moz-linear-gradient(top, #f997b0, #f56778);
+  box-shadow: inset 1px 1px 0 #fbc1d0;
+}
+button .pink, input[type=button] .pink, input[type=submit] .pink, input[type=reset] .pink, .button .pink {
+  border: 1px solid #ee8090;
+  border-bottom: 4px solid #b84d5a;
+}
+button .pink:not([disabled]):hover, input[type=button] .pink:not([disabled]):hover, input[type=submit] .pink:not([disabled]):hover, input[type=reset] .pink:not([disabled]):hover, .button .pink:not([disabled]):hover {
+  background: #f56778;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f56778), to(#f997b0));
+  background: -moz-linear-gradient(top, #f56778, #f997b0);
+}
+button .blue, button .blue:hover, button .blue:visited, input[type=button] .blue, input[type=button] .blue:hover, input[type=button] .blue:visited, input[type=submit] .blue, input[type=submit] .blue:hover, input[type=submit] .blue:visited, input[type=reset] .blue, input[type=reset] .blue:hover, input[type=reset] .blue:visited, .button .blue, .button .blue:hover, .button .blue:visited {
+  color: #42788e;
+  border-bottom: 4px solid #589cb6;
+  background: #abe4f8;
+  text-shadow: 0px 1px 0px #bee9fa;
+  background: -webkit-gradient(linear, left top, left bottom, from(#abe4f8), to(#74d0f4));
+  background: -moz-linear-gradient(top, #abe4f8, #74d0f4);
+  box-shadow: inset 1px 1px 0 #b2e6f8;
+}
+button .blue, input[type=button] .blue, input[type=submit] .blue, input[type=reset] .blue, .button .blue {
+  border: 1px solid #8cc5d9;
+  border-bottom: 4px solid #4e8aa1;
+}
+button .blue:not([disabled]):hover, input[type=button] .blue:not([disabled]):hover, input[type=submit] .blue:not([disabled]):hover, input[type=reset] .blue:not([disabled]):hover, .button .blue:not([disabled]):hover {
+  background: #74d0f4;
+  background: -webkit-gradient(linear, left top, left bottom, from(#74d0f4), to(#abe4f8));
+  background: -moz-linear-gradient(top, #74d0f4, #abe4f8);
+}
+button .green, button .green:hover, button .green:visited, input[type=button] .green, input[type=button] .green:hover, input[type=button] .green:visited, input[type=submit] .green, input[type=submit] .green:hover, input[type=submit] .green:visited, input[type=reset] .green, input[type=reset] .green:hover, input[type=reset] .green:visited, .button .green, .button .green:hover, .button .green:visited {
+  color: #5d7731;
+  border-bottom: 4px solid #799545;
+  text-shadow: 0px 1px 0px #d5e8aa;
+  background: #cae285;
+  background: -webkit-gradient(linear, left top, left bottom, from(#cae285), to(#a3cd5a));
+  background: -moz-linear-gradient(top, #cae285, #a3cd5a);
+  box-shadow: inset 1px 1px 0 #cce3a1;
+}
+button .green, input[type=button] .green, input[type=submit] .green, input[type=reset] .green, .button .green {
+  border: 1px solid #98b85b;
+  border-bottom: 4px solid #6d883b;
+}
+button .green:not([disabled]):hover, input[type=button] .green:not([disabled]):hover, input[type=submit] .green:not([disabled]):hover, input[type=reset] .green:not([disabled]):hover, .button .green:not([disabled]):hover {
+  background: #a3cd5a;
+  background: -webkit-gradient(linear, left top, left bottom, from(#a3cd5a), to(#cae285));
+  background: -moz-linear-gradient(top, #a3cd5a, #cae285);
+}
+button .turquoise, button .turquoise:hover, button .turqouise:visited, input[type=button] .turquoise, input[type=button] .turquoise:hover, input[type=button] .turqouise:visited, input[type=submit] .turquoise, input[type=submit] .turquoise:hover, input[type=submit] .turqouise:visited, input[type=reset] .turquoise, input[type=reset] .turquoise:hover, input[type=reset] .turqouise:visited, .button .turquoise, .button .turquoise:hover, .button .turqouise:visited {
+  color: #437b7d;
+  border-bottom: 4px solid #4fa7aa;
+  text-shadow: 0px 1px 0px #9fd5d7;
+  background: #81e8eb;
+  background: -webkit-gradient(linear, left top, left bottom, from(#b7f2f4), to(#81e8eb));
+  background: -moz-linear-gradient(top, #b7f2f4, #81e8eb);
+  box-shadow: inset 1px 1px 0 #d4f8f8;
+}
+button .turquoise, input[type=button] .turquoise, input[type=submit] .turquoise, input[type=reset] .turquoise, .button .turquoise {
+  border: 1px solid #87d3d5;
+  border-bottom: 4px solid #47989b;
+}
+button .turquoise:not([disabled]):hover, input[type=button] .turquoise:not([disabled]):hover, input[type=submit] .turquoise:not([disabled]):hover, input[type=reset] .turquoise:not([disabled]):hover, .button .turquoise:not([disabled]):hover {
+  background: #81e8eb;
+  background: -webkit-gradient(linear, left top, left bottom, from(#81e8eb), to(#b7f2f4));
+  background: -moz-linear-gradient(top, #81e8eb, #b7f2f4);
+}
+button .black, button .black:hover, button .black:visited, input[type=button] .black, input[type=button] .black:hover, input[type=button] .black:visited, input[type=submit] .black, input[type=submit] .black:hover, input[type=submit] .black:visited, input[type=reset] .black, input[type=reset] .black:hover, input[type=reset] .black:visited, .button .black, .button .black:hover, .button .black:visited {
+  color: #fff;
+  border-bottom: 4px solid #414141;
+  text-shadow: 0px 1px 0px #2f2f2f;
+  background: #656565;
+  background: -webkit-gradient(linear, left top, left bottom, from(#656565), to(#444));
+  background: -moz-linear-gradient(top, #656565, #444);
+  box-shadow: inset 1px 1px 0 #939393;
+}
+button .black, input[type=button] .black, input[type=submit] .black, input[type=reset] .black, .button .black {
+  border: 1px solid #535353;
+  border-bottom: 4px solid #343434;
+}
+button .black:after, input[type=button] .black:after, input[type=submit] .black:after, input[type=reset] .black:after, .button .black:after {
+  border: 1px solid #5a5a5a;
+}
+button .black:not([disabled]):hover, input[type=button] .black:not([disabled]):hover, input[type=submit] .black:not([disabled]):hover, input[type=reset] .black:not([disabled]):hover, .button .black:not([disabled]):hover {
+  background: #444;
+  background: -webkit-gradient(linear, left top, left bottom, from(#444), to(#656565));
+  background: -moz-linear-gradient(top, #444, #656565);
+}
+button .darkgray, button .darkgray:hover, button .darkgray:visited, input[type=button] .darkgray, input[type=button] .darkgray:hover, input[type=button] .darkgray:visited, input[type=submit] .darkgray, input[type=submit] .darkgray:hover, input[type=submit] .darkgray:visited, input[type=reset] .darkgray, input[type=reset] .darkgray:hover, input[type=reset] .darkgray:visited, .button .darkgray, .button .darkgray:hover, .button .darkgray:visited {
+  color: #555;
+  border-bottom: 4px solid #878787;
+  text-shadow: 0px 1px 0px #d6d6d6;
+  background: #d1d1d1;
+  background: -webkit-gradient(linear, left top, left bottom, from(#d1d1d1), to(#afafaf));
+  background: -moz-linear-gradient(top, #d1d1d1, #afafaf);
+  box-shadow: inset 1px 1px 0 #e3e3e3;
+}
+button .darkgray, input[type=button] .darkgray, input[type=submit] .darkgray, input[type=reset] .darkgray, .button .darkgray {
+  border: 1px solid #b4b4b4;
+  border-bottom: 4px solid #7b7b7b;
+}
+button .darkgray:not([disabled]):hover, input[type=button] .darkgray:not([disabled]):hover, input[type=submit] .darkgray:not([disabled]):hover, input[type=reset] .darkgray:not([disabled]):hover, .button .darkgray:not([disabled]):hover {
+  background: #afafaf;
+  background: -webkit-gradient(linear, left top, left bottom, from(#afafaf), to(#d1d1d1));
+  background: -moz-linear-gradient(top, #afafaf, #d1d1d1);
+}
+button, button .yellow, button .yellow:hover, button .yellow:visited, input[type=button], input[type=button] .yellow, input[type=button] .yellow:hover, input[type=button] .yellow:visited, input[type=submit], input[type=submit] .yellow, input[type=submit] .yellow:hover, input[type=submit] .yellow:visited, input[type=reset], input[type=reset] .yellow, input[type=reset] .yellow:hover, input[type=reset] .yellow:visited, .button, .button .yellow, .button .yellow:hover, .button .yellow:visited {
+  color: #996633;
+  border-bottom: 4px solid #b98a37;
+  text-shadow: 0px 1px 0px #fedd9b;
+  background: #feda71;
+  background: -webkit-gradient(linear, left top, left bottom, from(#feda71), to(#febe4d));
+  background: -moz-linear-gradient(top, #feda71, #febe4d);
+  box-shadow: inset 1px 1px 0 #fee9aa;
+}
+button, button .yellow, input[type=button], input[type=button] .yellow, input[type=submit], input[type=submit] .yellow, input[type=reset], input[type=reset] .yellow, .button, .button .yellow {
+  border: 1px solid #eab551;
+  border-bottom: 4px solid #9f7630;
+}
+button:not([disabled]):hover, button .yellow:not([disabled]):hover, input[type=button]:not([disabled]):hover, input[type=button] .yellow:not([disabled]):hover, input[type=submit]:not([disabled]):hover, input[type=submit] .yellow:not([disabled]):hover, input[type=reset]:not([disabled]):hover, input[type=reset] .yellow:not([disabled]):hover, .button:not([disabled]):hover, .button .yellow:not([disabled]):hover {
+  background: #febe4d;
+  background: -webkit-gradient(linear, left top, left bottom, from(#febe4d), to(#feda71));
+  background: -moz-linear-gradient(top, #febe4d, #feda71);
+}
+button .purple, button .purple:hover, button .purple:visited, input[type=button] .purple, input[type=button] .purple:hover, input[type=button] .purple:visited, input[type=submit] .purple, input[type=submit] .purple:hover, input[type=submit] .purple:visited, input[type=reset] .purple, input[type=reset] .purple:hover, input[type=reset] .purple:visited, .button .purple, .button .purple:hover, .button .purple:visited {
+  color: #7b5777;
+  border-bottom: 4px solid #946890;
+  text-shadow: 0px 1px 0px #eacae6;
+  background: #e8c4e4;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e8c4e4), to(#d698d0));
+  background: -moz-linear-gradient(top, #e8c4e4, #d698d0);
+  box-shadow: inset 1px 1px 0 #f2dcef;
+}
+button .purple, input[type=button] .purple, input[type=submit] .purple, input[type=reset] .purple, .button .purple {
+  border: 1px solid #da9fd4;
+  border-bottom: 4px solid #865d82;
+}
+button .purple:not([disabled]):hover, input[type=button] .purple:not([disabled]):hover, input[type=submit] .purple:not([disabled]):hover, input[type=reset] .purple:not([disabled]):hover, .button .purple:not([disabled]):hover {
+  background: #d698d0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#d698d0), to(#e8c4e4));
+  background: -moz-linear-gradient(top, #d698d0, #e8c4e4);
+}
+button .darkblue, button .darkblue:hover, button .darkblue:visited, input[type=button] .darkblue, input[type=button] .darkblue:hover, input[type=button] .darkblue:visited, input[type=submit] .darkblue, input[type=submit] .darkblue:hover, input[type=submit] .darkblue:visited, input[type=reset] .darkblue, input[type=reset] .darkblue:hover, input[type=reset] .darkblue:visited, .button .darkblue, .button .darkblue:hover, .button .darkblue:visited {
+  color: #515f6a;
+  border-bottom: 4px solid #62727e;
+  text-shadow: 0px 1px 0px #c4d0da;
+  background: #becbd6;
+  background: -webkit-gradient(linear, left top, left bottom, from(#becbd6), to(#8da5b7));
+  background: -moz-linear-gradient(top, #becbd6, #8da5b7);
+  box-shadow: inset 1px 1px 0 #d8e0e6;
+}
+button .darkblue, input[type=button] .darkblue, input[type=submit] .darkblue, input[type=reset] .darkblue, .button .darkblue {
+  border: 1px solid #a1aeb7;
+  border-bottom: 4px solid #5d6b75;
+}
+button .darkblue:not([disabled]):hover, input[type=button] .darkblue:not([disabled]):hover, input[type=submit] .darkblue:not([disabled]):hover, input[type=reset] .darkblue:not([disabled]):hover, .button .darkblue:not([disabled]):hover {
+  background: #8da5b7;
+  background: -webkit-gradient(linear, left top, left bottom, from(#8da5b7), to(#becbd6));
+  background: -moz-linear-gradient(top, #8da5b7, #becbd6);
+}
+
+input[type=text],
+input[type=email],
+input[type=password] {
+  -webkit-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+  -moz-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+  -ms-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+  -o-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+  box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background: #eeeae0;
+  border: 1px solid #c8c8c8;
+  color: #777;
+}
+input[type=text]:not([disabled]):focus,
+input[type=email]:not([disabled]):focus,
+input[type=password]:not([disabled]):focus {
+  -webkit-box-shadow: 0 0 2px #b5b0a8 inset;
+  -moz-box-shadow: 0 0 2px #b5b0a8 inset;
+  -ms-box-shadow: 0 0 2px #b5b0a8 inset;
+  -o-box-shadow: 0 0 2px #b5b0a8 inset;
+  box-shadow: 0 0 2px #b5b0a8 inset;
+  background-color: #fff;
+  border: 1px solid #b5b0a8;
+}
+
+@media print {
+  header, main {
+    box-shadow: none;
+  }
 }
 
 /*# sourceMappingURL=colors.css.map */

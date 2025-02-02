@@ -25,7 +25,7 @@ configurations {
 }
 
 tasks.bootRun {
-		sourceResources(sourceSets.getAt(SourceSet.MAIN_SOURCE_SET_NAME))
+	sourceResources(sourceSets.getAt(SourceSet.MAIN_SOURCE_SET_NAME))
 }
 
 dependencies {

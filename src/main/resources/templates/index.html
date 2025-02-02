@@ -6,31 +6,43 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="viewport" content="width=device-width" />
 	<link rel="stylesheet" th:href="@{/static/style/base.css}" />
+	<link rel="icon" type="image/png" href="/static/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="/static/favicon.svg" />
+	<link rel="shortcut icon" href="/static/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png" />
+	<meta name="apple-mobile-web-app-title" content="Alt Guide" />
+	<link rel="manifest" href="/static/site.webmanifest" />
 </head>
 
 <body>
 	<div id="wrapper">
 		<header>
-			<div class="sgu logo">
-				<img src="static/svg/sgu.svg" />
-			</div>
-			<div class="linux logo">
-				<img src="static/svg/ALT_logo_col.svg" />
+			<div class="row">
+				<span class="sgu logo">
+					<img width="128px" src="static/svg/sgu.svg" alt="СГУ" />
+				</span>
+				<span class="linux logo">
+					<img width="128px" src="static/svg/ALT_logo_col.svg" alt="Альтушка" />
+				</span>
+				<form id="search-form">
+					<div class="searchline">
+						<input type="text" />
+						<input type="reset" width="1rem" height="1rem" />
+					</div>
+					<noscript>
+						<button class="yellow">Поиск</button>
+					</noscript>
+				</form>
 			</div>
 		</header>
 		<main>
-			<form>
-				<input type="text" />
-				<noscript>
-					<button>Поиск</button>
-				</noscript>
-			</form>
 			<section>
 				<article>
-					<a href="#">
+					<ad href="#">
 						<h1>У меня такая-то проблема</h1>
 						<div class="goto"></div>
-					</a>
+					</ad>
+					Ну и биба с ней, Маску плотнейшая от сердца к Марсу
 				</article>
 			</section>
 		</main>
@@ -38,7 +50,6 @@
 
 		</footer>
 	</div>
-	<p th:text="|Hello, ahaha ${name}!|" />
 </body>
 
 </html>

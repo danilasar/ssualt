@@ -1,15 +1,120 @@
-@import "colors.scss";
+@use "lib.scss" as lib;
+@use "colors.scss";
+$button-border-radius: 3px;
+
+@font-face {
+  font-family: 'Code New Roman';
+  src: url('../fonts/Code New Roman.otf') format("opentype");
+}
+
+@font-face {
+  font-family: 'Code New Roman';
+  font-weight: bold;
+  src: url('../fonts/Code New Roman b.otf') format("opentype");
+}
+
+@font-face {
+  font-family: 'Code New Roman';
+  font-style: italic;
+  src: url('../fonts/Code New Roman i.otf') format("opentype");
+}
 
 #wrapper {
-  max-width: 768px;
+  max-width: 1024px;
   margin: 0 auto;
 }
 
-header {
+input, button {
+  padding: 0.75rem;
+}
+
+button, input[type=button], input[type=submit], input[type=reset], .button {
+  $result: 0 0 $button-border-radius $button-border-radius;
+  display: block;
+  float: left;
+  position: relative;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 25px;
+  text-align: center;
+  @include lib.vendor-prefix('border-radius', $result);
+  padding: calc(0.75rem - 7px);
+
+  &:not([disabled]):active {
+    border: none;
+    margin-top: 4px;
+    margin-left: 3px;
+  }
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    left: -1px;
+    height: 25px;
+    width: 100%;
+    bottom: -1px;
+    
+    @include lib.vendor-prefix('border-radius', $result);
+  }
+
+  &::before {
+    height: 23px;
+    bottom: -3px;
+    border-top: 0;
+  }
+
+  &:active::before, &:active::after {
+    border: none; 
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+	-webkit-border-radius: $button-border-radius;
+	-moz-border-radius: $button-border-radius;
+	-ms-border-radius: $button-border-radius;
+	-o-border-radius: $button-border-radius;
+	border-radius: $button-border-radius;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	padding: 15px 10px 15px 40px;
+	width: 80%;
+  &:focus {
+	  outline: none;
+  }
+}
+
+
+
+
+
+header .row {
   display: flex;
-  justify-content: space-between;
-  border-radius: 0px 0px 20px 20px;
-  box-shadow: 0 0 5px #333A33;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: .5rem;
+
+  .logo, form {
+    flex-grow: 1;
+  }
+
+  .logo {
+    min-width: 70px;
+  }
+  
+  form {
+    display: flex;
+    gap: 4px;
+  }
 
   .sgu img {
     padding: 15px;
@@ -24,16 +129,97 @@ header {
   }
 }
 
+#search-form {
+  flex-grow: 1;
+
+  .searchline {
+    position: relative;
+    flex-grow: 1;
+    gap: 0;
+    justify-content: stretch;
+    height: fit-content;
+    input[type=text] {
+      width: 100%;
+      padding-left: .5rem * 2 + 1.5rem;
+    }
+    input[type=reset] {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: .5rem;
+      font-size: 0;
+      line-height: 0;
+      text-indent: -9999px;
+      background: url("../icons/cross.webp") center center no-repeat;
+      background-size: 1.5rem 1.5rem;
+      border: none;
+      cursor: pointer;
+      padding-right: 0;
+      padding-left: 0;
+      margin: 0 0 0 .5rem;
+      width: 1.6rem;
+      box-shadow: none;
+      &::before, &::after {
+        content: none;
+        border: none;
+      }
+      &:not([disabled]):hover {
+        filter: brightness(120%);
+        background-size: 1.6rem 1.6rem;
+      }
+      &:not([disabled]):active {
+        filter: brightness(80%);
+        background-size: 1.4rem 1.4rem;
+      }
+    }
+  }
+
+  .searchline::before {
+    content: '';
+    background: url("../icons/search.png") no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    top: calc(50% - 1.5rem / 2);
+    left: .5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+main {
+  margin-top: 2rem;
+  padding: 2rem;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
+  font-size: 20px;
+  min-width: 320px;
+  font-family: 'Code New Roman';
 }
 
 * {
   box-sizing: border-box;
 }
 
-body {
-  min-width: 320px;
+@media screen and (min-width: 580px) {
+  header .row {
+    flex-wrap: nowrap;
+  }
+  header .linux {
+    order: 3;
+  }
+}
+
+@media print {
+  #search-form {
+    display: none;
+  }
+  header .logo {
+    width: 64px;
+    max-width: 64px;
+    min-width: 64px;
+  }
 }
